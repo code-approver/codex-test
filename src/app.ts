@@ -13,11 +13,18 @@ const SESSION_KEY = 'session';
 const ORDERS_KEY = 'orders';
 
 const loginDiv = document.getElementById('login') as HTMLDivElement;
+
+const registerDiv = document.getElementById('register') as HTMLDivElement;
 const appDiv = document.getElementById('order') as HTMLDivElement;
+
 const usernameInput = document.getElementById('username') as HTMLInputElement;
 const passwordInput = document.getElementById('password') as HTMLInputElement;
 const loginButton = document.getElementById('loginButton') as HTMLButtonElement;
+const showRegisterButton = document.getElementById('showRegister') as HTMLButtonElement;
+const newUsernameInput = document.getElementById('newUsername') as HTMLInputElement;
+const newPasswordInput = document.getElementById('newPassword') as HTMLInputElement;
 const registerButton = document.getElementById('registerButton') as HTMLButtonElement;
+const cancelRegisterButton = document.getElementById('cancelRegister') as HTMLButtonElement;
 const pizzaSelect = document.getElementById('pizzaSelect') as HTMLSelectElement;
 const orderButton = document.getElementById('orderButton') as HTMLButtonElement;
 const ordersList = document.getElementById('orders') as HTMLUListElement;
@@ -82,17 +89,31 @@ function renderOrders(): void {
 
 function showApp(): void {
   loginDiv.style.display = 'none';
+  registerDiv.style.display = 'none';
+
   appDiv.style.display = 'block';
   renderOrders();
 }
 
 function showLogin(): void {
   loginDiv.style.display = 'block';
+  registerDiv.style.display = 'none';
+  appDiv.style.display = 'none';
+}
+
+function showRegister(): void {
+  loginDiv.style.display = 'none';
+  registerDiv.style.display = 'block';
+
   appDiv.style.display = 'none';
 }
 
 loginButton.addEventListener('click', () => login(usernameInput.value, passwordInput.value));
-registerButton.addEventListener('click', () => register(usernameInput.value, passwordInput.value));
+
+showRegisterButton.addEventListener('click', () => showRegister());
+registerButton.addEventListener('click', () => register(newUsernameInput.value, newPasswordInput.value));
+cancelRegisterButton.addEventListener('click', () => showLogin());
+
 orderButton.addEventListener('click', () => addOrder(pizzaSelect.value));
 logoutButton.addEventListener('click', () => logout());
 

@@ -2,6 +2,7 @@
 
 Simple TypeScript pizza ordering app with a login page. User accounts and orders are saved using the browser's local storage, so no server or external database is required.
 
+
 ## Development
 
 Install dependencies and compile the TypeScript source:
