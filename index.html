@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza Order</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div id="login" class="card">
+      <h1>Login</h1>
+      <input id="username" placeholder="Username" />
+      <input id="password" type="password" placeholder="Password" />
+      <button id="loginButton">Login</button>
+      <button id="showRegister">Register</button>
+    </div>
+    <div id="register" class="card" style="display:none;">
+      <h1>Register</h1>
+      <input id="newUsername" placeholder="Username" />
+      <input id="newPassword" type="password" placeholder="Password" />
+      <button id="registerButton">Create Account</button>
+      <button id="cancelRegister">Cancel</button>
+    </div>
+    <div id="order" class="card" style="display:none;">
+      <h1>Order Pizza</h1>
+      <select id="pizzaSelect">
+        <option value="Margherita">Margherita</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Veggie">Veggie</option>
+      </select>
+      <button id="orderButton">Add Order</button>
+      <h2>Your Orders</h2>
+      <ul id="orders"></ul>
+      <button id="logoutButton">Logout</button>
+    </div>
+  </div>
+  <script type="module" src="./dist/app.js"></script>
+</body>
+</html>
