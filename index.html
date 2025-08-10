@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza Order</title>
+</head>
+<body>
+  <div id="login">
+    <h1>Login</h1>
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password" />
+    <button id="loginButton">Login</button>
+    <button id="registerButton">Register</button>
+  </div>
+  <div id="order" style="display:none;">
+    <h1>Order Pizza</h1>
+    <select id="pizzaSelect">
+      <option value="Margherita">Margherita</option>
+      <option value="Pepperoni">Pepperoni</option>
+      <option value="Veggie">Veggie</option>
+    </select>
+    <button id="orderButton">Add Order</button>
+    <h2>Your Orders</h2>
+    <ul id="orders"></ul>
+    <button id="logoutButton">Logout</button>
+  </div>
+  <script type="module" src="./dist/app.js"></script>
+</body>
+</html>

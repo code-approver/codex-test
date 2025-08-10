@@ -1,1 +1,14 @@
-A pizza order app with typescript for the colleauge in the company. There should be a login page, etc and use the lightest database as possible without needing a server.
+# Pizza Order App
+
+Simple TypeScript pizza ordering app with a login page. User accounts and orders are saved using the browser's local storage, so no server or external database is required.
+
+## Development
+
+Install dependencies and compile the TypeScript source:
+
+```bash
+npm install
+npm run build
+```
+
+Open `index.html` in a browser to try the app.
