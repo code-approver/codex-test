@@ -13,6 +13,7 @@ const SESSION_KEY = 'session';
 const ORDERS_KEY = 'orders';
 
 const loginDiv = document.getElementById('login') as HTMLDivElement;
+
 const registerDiv = document.getElementById('register') as HTMLDivElement;
 const appDiv = document.getElementById('order') as HTMLDivElement;
 
@@ -89,6 +90,7 @@ function renderOrders(): void {
 function showApp(): void {
   loginDiv.style.display = 'none';
   registerDiv.style.display = 'none';
+
   appDiv.style.display = 'block';
   renderOrders();
 }
@@ -102,13 +104,16 @@ function showLogin(): void {
 function showRegister(): void {
   loginDiv.style.display = 'none';
   registerDiv.style.display = 'block';
+
   appDiv.style.display = 'none';
 }
 
 loginButton.addEventListener('click', () => login(usernameInput.value, passwordInput.value));
+
 showRegisterButton.addEventListener('click', () => showRegister());
 registerButton.addEventListener('click', () => register(newUsernameInput.value, newPasswordInput.value));
 cancelRegisterButton.addEventListener('click', () => showLogin());
+
 orderButton.addEventListener('click', () => addOrder(pizzaSelect.value));
 logoutButton.addEventListener('click', () => logout());
 
